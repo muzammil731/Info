@@ -7,9 +7,10 @@ pipeline {
     stage('Scan') {
       steps {
         withSonarQubeEnv(installationName: 'SonarQube') {
-        sh './mvnw clean install site surefire-report:report'
-        sh 'tree'
-      }
-    }
-  }
-}
+          sh './mvnw clean install site surefire-report:report'
+          sh 'tree'
+        }
+      }
+    }
+  }
+} 
